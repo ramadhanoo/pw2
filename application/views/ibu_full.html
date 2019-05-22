@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Welcome to CodeIgniter</title>
+</head>
+<body>
+
+<a href="<?php echo site_url('ibu/insert');?>">Insert Ibu</a>
+
+<table border="1">
+	<thead>
+		<tr>
+			<th>ID Ibu</th>
+			<th>Nama Ibu</th>
+			<th>Umur Ibu</th>
+		</tr>
+	</thead>
+	<tbody>
+		<?php foreach($daftar_ibu as $ibu):?>
+		<tr>
+			<td><?php echo $ibu['id_ibu'];?></td>
+			<td><?php echo $ibu['nama_ibu'];?></td>
+			<td><?php echo $ibu['umur_ibu'];?></td>
+		</tr>
+		<?php endforeach;?>
+	</tbody>
+</table>
+
+</body>
+</html>
