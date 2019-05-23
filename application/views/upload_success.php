@@ -14,7 +14,8 @@
 
 	<img src="<?php echo base_url('uploads/'.$upload_data['file_name']);?>" width="500">
 	<br />
-	<a href="<?php echo base_url('uploads/'.$upload_data['file_name']);?>" download="<?php echo $upload_data['file_name'];?>" class="btn btn-primary"><i class="fas fa-download"></i> Download Image</a>
+	
+	<a href="<?php echo base_url('uploads/'.$upload_data['file_name']);?>" download="rahmat.jpeg" class="btn btn-primary"><i class="fas fa-download"></i> Download Image</a>
 	<br /><br />
 
 	<table class="table table-striped">

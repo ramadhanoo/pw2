@@ -17,8 +17,8 @@
 	<tr>
 		<td>Nama Ibu</td>
 		<td>
-			<input type="text" name="nama_ibu" value="<?php echo $data_ibu['nama_ibu2'];?>"  class="form-control">
-			<input type="hidden" name="nama_ibu_old" value="<?php echo $data_ibu['nama_ibu2'];?>">
+			<input type="text" name="nama_ibu" value="<?php echo $data_ibu['nama_ibu'];?>"  class="form-control">
+			<input type="hidden" name="nama_ibu_old" value="<?php echo $data_ibu['nama_ibu'];?>">
 			<?php echo form_error('nama_ibu');?>
 		</td>
 	</tr>
@@ -29,6 +29,19 @@
 			<?php echo form_error('umur_ibu');?>
 		</td>
 	</tr>
+	<tr>
+			<td>Foto Ibu</td>
+			<td>
+				<input type="file" name="userfile" class="form-control">
+				<?php echo form_error('foto_ibu');?>
+				
+				<br />
+				<?php if($data_ibu['foto_ibu'] != ''):?>
+				<img src="<?php echo base_url('uploads/'.$data_ibu['foto_ibu']);?>" width="100">
+				<?php endif;?>
+				
+			</td>
+		</tr>
 	<tr>
 		<td></td>
 		<td><button class="btn btn-primary"><i class="fas fa-save"></i> Update</button></td>

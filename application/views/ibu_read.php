@@ -21,6 +21,7 @@
 				<th>ID Ibu</th>
 				<th>Nama Ibu</th>
 				<th>Umur Ibu</th>
+				<th>Foto Ibu</th>
 				<th>Action</th>
 			</tr>
 		</thead>
@@ -28,8 +29,13 @@
 			<?php foreach($daftar_ibu as $ibu):?>
 			<tr>
 				<td><?php echo $ibu['id_ibu'];?></td>
-				<td><?php echo $ibu['nama_ibu2'];?></td>
+				<td><?php echo $ibu['nama_ibu'];?></td>
 				<td><?php echo $ibu['umur_ibu'];?></td>
+				<td>
+					<?php if($ibu['foto_ibu'] != ''):?>
+					<img src="<?php echo base_url('uploads/'.$ibu['foto_ibu']);?>" width="100">
+					<?php endif;?>
+				</td>
 				<td>
 					<a href="<?php echo site_url('ibu/update/'.$ibu['id_ibu']);?>" class="btn btn-success" >
 					<i class="fa fa-edit"></i> Update

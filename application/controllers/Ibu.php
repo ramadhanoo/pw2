@@ -24,25 +24,49 @@ class Ibu extends CI_Controller {
 		$this->load->view("ibu_read", $view_data);
 	}
 
-	public function insert() 
+	public function insert($view_data=array()) 
 	{
 		$this->load->view("ibu_insert");
 	}
 
 	public function insert_action() 
 	{	
-		$this->form_validation->set_rules('nama_ibu', 'lang:nama_ibu', 'required|alpha|min_length[5]');
+		$this->form_validation->set_rules('nama_ibu', 'Nama Ibu', 'required');
         $this->form_validation->set_rules('umur_ibu', 'Umur Ibu', 'required|numeric');
 
+        //validasi input benar
         if ($this->form_validation->run() == TRUE) 
         {
-			$insert_data = array();
-			$insert_data['nama_ibu2'] = $this->input->post("nama_ibu");
-			$insert_data['umur_ibu'] = $this->input->post("umur_ibu");
+        	//setting upload
+        	$config['upload_path']          = './uploads/';
+            $config['allowed_types']        = 'gif|jpg|png|jpeg';
+            $config['max_size']             = 100;
+            $config['max_width']            = 1024;
+            $config['max_height']           = 768;
+            $config['overwrite']           = TRUE;
+            $this->load->library('upload', $config);
 
-			$this->ibu_model->insert($insert_data);
+            //validasi foto salah
+            if ( !$this->upload->do_upload('userfile'))
+            {	
+                $view_data = array('error' => $this->upload->display_errors());
+                $this->load->view('ibu_insert', $view_data);
 
-			redirect("ibu/read");
+            //validasi foto benar
+            } else {
+                $upload_data = $this->upload->data();
+                $file_foto_ibu = $upload_data['file_name'];
+
+                $insert_data = array();
+				$insert_data['nama_ibu'] = $this->input->post("nama_ibu");
+				$insert_data['umur_ibu'] = $this->input->post("umur_ibu");
+				$insert_data['foto_ibu'] = $file_foto_ibu;
+
+				$this->ibu_model->insert($insert_data);
+
+				redirect("ibu/read");
+            }
+
 		} 
 		else 
 		{
@@ -70,7 +94,7 @@ class Ibu extends CI_Controller {
         if ($this->form_validation->run() == TRUE) 
         {
 			$update_data = array();
-			$update_data['nama_ibu2'] = $this->input->post("nama_ibu");
+			$update_data['nama_ibu'] = $this->input->post("nama_ibu");
 			$update_data['umur_ibu'] = $this->input->post("umur_ibu");
 		
 			$this->ibu_model->update($id_ibu, $update_data);
