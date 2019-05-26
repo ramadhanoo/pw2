@@ -25,7 +25,7 @@
 				<td>4 Tahun</td>
 			</tr>
 			<tr>
-				<td>1</td>
+				<td>2</td>
 				<td>Soeharto</td>
 				<td>32 Tahun</td>
 			</tr>
@@ -35,7 +35,7 @@
 				<td>1 Tahun</td>
 			</tr>
 			<tr>
-				<td>1</td>
+				<td>4</td>
 				<td>Abdurahman Wahid</td>
 				<td>2 Tahun</td>
 			</tr>
