@@ -155,6 +155,40 @@ class Ibu extends CI_Controller {
 		redirect("ibu/read");
 	}
 
-	
+	public function download()
+	{
+		//load library excel
+		$this->load->library('excel');
+                
+        $excel = $this->excel;
+        $excel->setActiveSheetIndex(0)->setTitle('Export Data');
+
+		//table header
+        $excel->getActiveSheet()->setCellValue('A1', 'ID Ibu');
+        $excel->getActiveSheet()->setCellValue('B1', 'Nama Ibu');
+        $excel->getActiveSheet()->setCellValue('C1', 'Umur Ibu');
+
+        //ambil data dari db
+		$daftar_ibu = $this->ibu_model->read();
+
+		//increment
+		$baris = 2;
+		foreach($daftar_ibu as $ibu) {
+			$excel->getActiveSheet()->setCellValue('A'.$baris, $ibu['id_ibu']);
+            $excel->getActiveSheet()->setCellValue('B'.$baris, $ibu['nama_ibu']);
+            $excel->getActiveSheet()->setCellValue('C'.$baris, $ibu['umur_ibu']);
+            $baris++;
+		}
+
+		//save file         
+        $filename='ibu_data.xls';
+        header('Content-Type: application/vnd.ms-excel');
+        header('Content-Disposition: attachment;filename="'.$filename.'"');
+        header('Cache-Control: max-age=0');
+                    
+        $objWriter = PHPExcel_IOFactory::createWriter($this->excel, 'Excel5');
+        $objWriter->save('php://output');
+
+	}
 
 }
