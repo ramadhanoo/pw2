@@ -50,6 +50,9 @@
 		</tbody>
 	</table>
 
+	<br />
+	<a href="<?php echo site_url('ibu/download');?>" class="btn btn-success"><i class="fas fa-download"></i> Download</a>
+
 
 </body>
 </html>

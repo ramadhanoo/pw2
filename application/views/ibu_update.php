@@ -11,7 +11,9 @@
 </head>
 <body>
 
-<form name="ibu_update" method="post" action="<?php echo site_url('ibu/update_action/'.$data_ibu['id_ibu']);?>">
+<?php echo !empty($error) ? $error : '';?>
+
+<form name="ibu_update" method="post" action="<?php echo site_url('ibu/update_action/'.$data_ibu['id_ibu']);?>" enctype="multipart/form-data">
 
 <table border="1" class="table table-striped">
 	<tr>
