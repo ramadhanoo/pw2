@@ -13,10 +13,10 @@ Highcharts.chart('container-chart', {
         type: 'column'
     },
     title: {
-        text: 'Historic World Population by Region'
+        text: 'Populasi Penduduk Dunia'
     },
     subtitle: {
-        text: 'Source: Wikipedia.org'
+        text: 'Dibagi per Benua'
     },
     xAxis: {
         categories: ['Africa', 'America', 'Asia', 'Europe', 'Oceania'],
@@ -38,6 +38,9 @@ Highcharts.chart('container-chart', {
             dataLabels: {
                 enabled: true
             }
+        },
+        series: {
+            stacking: 'normal'
         }
     },
     legend: {
@@ -55,10 +58,12 @@ Highcharts.chart('container-chart', {
     credits: {
         enabled: false
     },
-    series: [{
-        name: 'Year 2016',
-        data: [1216, 1001, 4436, 738, 40]
-    }]
+    series: [
+    {
+        name: 'Usia',
+        data: [1016, 1001, 4436, 738, 40]
+    }
+    ]
 });
 </script>
 

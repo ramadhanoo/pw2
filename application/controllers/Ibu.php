@@ -21,7 +21,8 @@ class Ibu extends CI_Controller {
 		$view_data = array();
 		$view_data['daftar_ibu'] = $daftar_ibu;
 
-		$this->load->view("ibu_read", $view_data);
+		$view_data['body_page'] = 'ibu_read';
+		$this->load->view("theme/index", $view_data);
 	}
 
 	public function insert($view_data=array()) 
