@@ -14,7 +14,7 @@
 
   <!-- Nav Item - Dashboard -->
   <li class="nav-item">
-    <a class="nav-link" href="<?php echo site_url('chart');?>">
+    <a class="nav-link" href="{site_url('chart')}">
       <i class="fas fa-fw fa-tachometer-alt"></i>
       <span>Grafik</span></a>
   </li>
@@ -38,14 +38,14 @@
     </a>
     <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
       <div class="bg-white py-2 collapse-inner rounded">
-        <a class="collapse-item" href="<?php echo site_url('ibu');?>">Ibu</a>
-        <a class="collapse-item" href="<?php echo site_url('anak');?>">Anak</a>
+        <a class="collapse-item" href="{site_url('ibu')}">Ibu</a>
+        <a class="collapse-item" href="{site_url('anak')}">Anak</a>
       </div>
     </div>
   </li>
 
   <li class="nav-item">
-    <a class="nav-link" href="<?php echo site_url('export');?>">
+    <a class="nav-link" href="{site_url('export')}">
       <i class="fas fa-fw fa-download"></i>
       <span>Export</span>
     </a>

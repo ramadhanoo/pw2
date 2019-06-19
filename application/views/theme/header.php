@@ -50,7 +50,7 @@
 
               <!-- Dropdown - User Information -->
               <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
-                <a class="dropdown-item" href="<?php echo site_url('logout');?>">
+                <a class="dropdown-item" href="{site_url('logout')}">
                   <i class="fas fa-power-off fa-sm fa-fw mr-2 text-gray-400"></i>
                   Logout
                 </a>

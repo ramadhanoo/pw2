@@ -4,7 +4,7 @@
 <hr class="sidebar-divider">
 
 <!--body page-->
-<a href="<?php echo site_url('ibu/insert');?>" class="btn btn-primary"><i class="fas fa-plus"></i> Insert</a>
+<a href="{site_url('ibu/insert')}" class="btn btn-primary"><i class="fas fa-plus"></i> Insert</a>
 <br /><br />
 
 <table border="1" class="table table-striped">
@@ -18,32 +18,32 @@
 		</tr>
 	</thead>
 	<tbody>
-		<?php foreach($daftar_ibu as $ibu):?>
+		{foreach $daftar_ibu as $ibu}
 		<tr>
-			<td><?php echo $ibu['id_ibu'];?></td>
-			<td><?php echo $ibu['nama_ibu'];?></td>
-			<td><?php echo $ibu['umur_ibu'];?></td>
+			<td>{$ibu.id_ibu}</td>
+			<td>{$ibu.nama_ibu}</td>
+			<td>{$ibu.umur_ibu}</td>
 			<td>
-				<?php if($ibu['foto_ibu'] != ''):?>
-				<img src="<?php echo base_url('uploads/'.$ibu['foto_ibu']);?>" width="100">
-				<?php endif;?>
+				{if $ibu['foto_ibu'] != ''}
+				<img src="{base_url("uploads/{$ibu.foto_ibu}")}" width="100">
+				{/if}
 			</td>
 			<td>
-				<a href="<?php echo site_url('ibu/update/'.$ibu['id_ibu']);?>" class="btn btn-success" >
+				<a href="{site_url("ibu/update/{$ibu.id_ibu}")}" class="btn btn-success" >
 				<i class="fa fa-edit"></i> Update
 				</a>
 				
-				<a href="<?php echo site_url('ibu/delete_action/'.$ibu['id_ibu']);?>" class="btn btn-danger">
+				<a href="{site_url("ibu/delete_action/{$ibu.id_ibu}")}" class="btn btn-danger">
 				<i class="fa fa-trash"></i> Delete
 				</a>
 			</td>
 		</tr>
-		<?php endforeach;?>
+		{/foreach}
 	</tbody>
 </table>
 
 <br />
-<a href="<?php echo site_url('ibu/download');?>" class="btn btn-success"><i class="fas fa-download"></i> Download</a>
+<a href="{site_url('ibu/download')}" class="btn btn-success"><i class="fas fa-download"></i> Download</a>
 <!--end of body page-->
 
 </div>
