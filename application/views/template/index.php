@@ -24,7 +24,7 @@
   <!-- Page Wrapper -->
   <div id="wrapper">
 
-    {include file="theme/sidebar.php"}
+    {include file="template/sidebar.php"}
 
     <!-- Content Wrapper -->
     <div id="content-wrapper" class="d-flex flex-column">
@@ -32,7 +32,7 @@
       <!-- Main Content -->
       <div id="content">
 
-        {include file="theme/header.php"}
+        {include file="template/header.php"}
 
         <!-- Begin Page Content -->
         <div class="container-fluid">
@@ -45,7 +45,7 @@
       </div>
       <!-- End of Main Content -->
 
-      {include file="theme/footer.php"}
+      {include file="template/footer.php"}
 
     </div>
     <!-- End of Content Wrapper -->

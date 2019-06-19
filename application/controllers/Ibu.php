@@ -22,7 +22,7 @@ class Ibu extends CI_Controller {
 		$view_data['daftar_ibu'] = $daftar_ibu;
 
 		$view_data['body_page'] = 'ibu_read';
-		$this->smartie->view("theme/index", $view_data);
+		$this->smartie->view("template/index", $view_data);
 	}
 
 	public function insert($view_data=array()) 
