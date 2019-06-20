@@ -1,4 +1,27 @@
-<!DOCTYPE html>
+<?php
+/* Smarty version 3.1.33, created on 2019-06-19 13:14:07
+  from '/var/www/html/pw2/application/views/export_view.php' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.33',
+  'unifunc' => 'content_5d09d2aff341e0_88094853',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '74b5144b33ed1e5d800e44708cbe113ff7478142' => 
+    array (
+      0 => '/var/www/html/pw2/application/views/export_view.php',
+      1 => 1558831979,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_5d09d2aff341e0_88094853 (Smarty_Internal_Template $_smarty_tpl) {
+?><!DOCTYPE html>
 <html>
 <head>
 	<title>Codeigniter</title>
@@ -10,7 +33,7 @@
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 <body>
 
-	<table class="table table-striped table-hover" id="dataTable">
+	<table border="1" class="table table-striped">
 		<thead>
 			<tr>
 				<th>ID Ibu</th>
@@ -57,8 +80,9 @@
 		</tbody>
 	</table>
 
-	<a href="<?php echo site_url('export/download');?>" class="btn btn-primary"><i class="fas fa-download"></i> download</a>
+	<a href="<?php echo '<?php ';?>echo site_url('export/download');<?php echo '?>';?>" class="btn btn-primary"><i class="fas fa-download"></i> download</a>
 
 
 </body>
-</html>
+</html><?php }
+}

@@ -9,10 +9,13 @@ class Chart extends CI_Controller {
 
     public function index()
     {
-    	$this->load->view('chart');
+        $view_data['body_page'] = 'chart';
+        $this->smartie->view("template/index", $view_data);
+    	
+        //$this->load->view('chart');
     }
 
-    public function column_chart()
+    public function pahlawan_chart()
     {
     	//load model : pahlawan
     	$this->load->model('pahlawan_model');
@@ -24,7 +27,9 @@ class Chart extends CI_Controller {
 		$view_data = array();
 		$view_data['daftar_pahlawan'] = $daftar_pahlawan;
 
-		$this->load->view("column_chart", $view_data);
+		$view_data['body_page'] = 'pahlawan_chart';
+        $this->smartie->view("template/index", $view_data);
+        //$this->load->view("column_chart", $view_data);
     }
 
 }

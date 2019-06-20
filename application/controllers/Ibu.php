@@ -27,13 +27,19 @@ class Ibu extends CI_Controller {
 
 	public function insert($view_data=array()) 
 	{
-		$this->load->view("ibu_insert");
+		$view_data['body_page'] = 'ibu_insert';
+		$this->smartie->view("template/index", $view_data);
+		
+		//$this->load->view("ibu_insert");
 	}
 
 	public function insert_action() 
 	{	
 		$this->form_validation->set_rules('nama_ibu', 'Nama Ibu', 'required');
         $this->form_validation->set_rules('umur_ibu', 'Umur Ibu', 'required|numeric');
+
+        $view_data = array();
+        $view_data['error'] = '';
 
         //validasi input benar
         if ($this->form_validation->run() == TRUE) 
@@ -51,9 +57,11 @@ class Ibu extends CI_Controller {
             //validasi foto salah
             if ( !$this->upload->do_upload('userfile'))
             {	
-                $view_data = array();
                 $view_data['error'] = $this->upload->display_errors();
-                $this->load->view('ibu_insert', $view_data);
+                
+                $view_data['body_page'] = 'ibu_insert';
+				$this->smartie->view("template/index", $view_data);
+                //$this->load->view('ibu_insert', $view_data);
 
             //validasi foto benar
             } else {
@@ -86,7 +94,9 @@ class Ibu extends CI_Controller {
 		$view_data = array();
 		$view_data['data_ibu'] = $data_ibu;
 
-		$this->load->view('ibu_update', $view_data);
+		$view_data['body_page'] = 'ibu_update';
+		$this->smartie->view("template/index", $view_data);
+		//$this->load->view('ibu_update', $view_data);
 	}
 
 	public function update_action($id_ibu) 
@@ -106,7 +116,6 @@ class Ibu extends CI_Controller {
 	            $config['max_width']            = 1280;
 	            $config['max_height']           = 768;
 	            $config['overwrite']           = TRUE;
-	            $config['file_name']           = $this->input->post("nama_ibu");
 	            $this->load->library('upload', $config);
 
 	            //validasi foto salah

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-06-19 08:22:06
+/* Smarty version 3.1.33, created on 2019-06-19 18:38:48
   from '/var/www/html/pw2/application/views/ibu_read.php' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d098e3e39c568_33187459',
+  'unifunc' => 'content_5d0a1ec81163b2_33150124',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     'ec40b3ec4ff5ddd6da827469750c5c046f944714' => 
     array (
       0 => '/var/www/html/pw2/application/views/ibu_read.php',
-      1 => 1560907284,
+      1 => 1560944323,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d098e3e39c568_33187459 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d0a1ec81163b2_33150124 (Smarty_Internal_Template $_smarty_tpl) {
 ?><div id="container-fluid">
 
 <h1 class="h3 mb-2 text-gray-800">Daftar Ibu</h1>
@@ -31,7 +31,7 @@ function content_5d098e3e39c568_33187459 (Smarty_Internal_Template $_smarty_tpl)
 " class="btn btn-primary"><i class="fas fa-plus"></i> Insert</a>
 <br /><br />
 
-<table border="1" class="table table-striped">
+<table class="table table-striped table-hover" id="dataTable">
 	<thead>
 		<tr>
 			<th>ID Ibu</th>

@@ -14,9 +14,15 @@
 
   <!-- Nav Item - Dashboard -->
   <li class="nav-item">
-    <a class="nav-link" href="{site_url('chart')}">
+    <a class="nav-link" href="{site_url('chart/index')}">
       <i class="fas fa-fw fa-tachometer-alt"></i>
       <span>Grafik</span></a>
+  </li>
+
+  <li class="nav-item">
+    <a class="nav-link" href="{site_url('chart/pahlawan_chart')}">
+      <i class="fas fa-fw fa-tachometer-alt"></i>
+      <span>Grafik Pahlawan</span></a>
   </li>
 
   <!-- Divider -->

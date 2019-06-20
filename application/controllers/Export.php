@@ -9,7 +9,8 @@ class Export extends CI_Controller {
 
         public function index()
         {
-                $this->load->view('export_view');
+                $view_data['body_page'] = 'export_view';
+                $this->smartie->view("template/index", $view_data);
         }
 
         public function download()

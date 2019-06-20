@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-06-19 08:25:13
+/* Smarty version 3.1.33, created on 2019-06-19 18:37:49
   from '/var/www/html/pw2/application/views/template/index.php' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d098ef9586025_99790248',
+  'unifunc' => 'content_5d0a1e8daa5591_97681909',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '1b8d2872e7c887188a648901dfa8e77eae70e113' => 
     array (
       0 => '/var/www/html/pw2/application/views/template/index.php',
-      1 => 1560907511,
+      1 => 1560944268,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:template/footer.php' => 1,
   ),
 ),false)) {
-function content_5d098ef9586025_99790248 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d0a1e8daa5591_97681909 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -40,8 +40,7 @@ function content_5d098ef9586025_99790248 (Smarty_Internal_Template $_smarty_tpl)
   <!-- Custom fonts for this template-->
   <link href="<?php echo base_url('asset/vendor/fontawesome-free/css/all.min.css');?>
 " rel="stylesheet" type="text/css">
-  <link href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i" rel="stylesheet">
-
+ 
   <link href="<?php echo base_url('asset/css/sb-admin-2.min.css');?>
 " rel="stylesheet">
   <link href="<?php echo base_url('asset/vendor/datatables/dataTables.bootstrap4.min.css');?>
@@ -100,6 +99,20 @@ function content_5d098ef9586025_99790248 (Smarty_Internal_Template $_smarty_tpl)
  src="<?php echo base_url('asset/vendor/bootstrap/js/bootstrap.bundle.min.js');?>
 "><?php echo '</script'; ?>
 >
+
+  <?php echo '<script'; ?>
+ src="<?php echo base_url('asset/vendor/datatables/jquery.dataTables.min.js');?>
+"><?php echo '</script'; ?>
+>
+  <?php echo '<script'; ?>
+ src="<?php echo base_url('asset/vendor/datatables/dataTables.bootstrap4.min.js');?>
+"><?php echo '</script'; ?>
+>
+  <?php echo '<script'; ?>
+ src="<?php echo base_url('asset/js/demo/datatables-demo.js');?>
+"><?php echo '</script'; ?>
+>
+
   <?php echo '<script'; ?>
  src="<?php echo base_url('asset/js/sb-admin-2.min.js');?>
 "><?php echo '</script'; ?>

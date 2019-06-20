@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-06-19 08:25:13
+/* Smarty version 3.1.33, created on 2019-06-19 15:10:30
   from '/var/www/html/pw2/application/views/template/sidebar.php' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d098ef9596ba0_17444478',
+  'unifunc' => 'content_5d09edf6f05d43_37692463',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '85190ee5cb7a571bb3c915ab36de3a125cb9f369' => 
     array (
       0 => '/var/www/html/pw2/application/views/template/sidebar.php',
-      1 => 1560906810,
+      1 => 1560931243,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d098ef9596ba0_17444478 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d09edf6f05d43_37692463 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!-- Sidebar -->
 <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
@@ -37,10 +37,17 @@ function content_5d098ef9596ba0_17444478 (Smarty_Internal_Template $_smarty_tpl)
 
   <!-- Nav Item - Dashboard -->
   <li class="nav-item">
-    <a class="nav-link" href="<?php echo site_url('chart');?>
+    <a class="nav-link" href="<?php echo site_url('chart/index');?>
 ">
       <i class="fas fa-fw fa-tachometer-alt"></i>
       <span>Grafik</span></a>
+  </li>
+
+  <li class="nav-item">
+    <a class="nav-link" href="<?php echo site_url('chart/pahlawan_chart');?>
+">
+      <i class="fas fa-fw fa-tachometer-alt"></i>
+      <span>Grafik Pahlawan</span></a>
   </li>
 
   <!-- Divider -->

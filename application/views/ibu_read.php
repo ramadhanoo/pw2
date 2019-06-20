@@ -7,7 +7,7 @@
 <a href="{site_url('ibu/insert')}" class="btn btn-primary"><i class="fas fa-plus"></i> Insert</a>
 <br /><br />
 
-<table border="1" class="table table-striped">
+<table class="table table-striped table-hover" id="dataTable">
 	<thead>
 		<tr>
 			<th>ID Ibu</th>

@@ -1,13 +1,39 @@
-<html>
+<?php
+/* Smarty version 3.1.33, created on 2019-06-20 14:29:02
+  from '/var/www/html/pw2/application/views/chart.php' */
+
+/* @var Smarty_Internal_Template $_smarty_tpl */
+if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
+  'version' => '3.1.33',
+  'unifunc' => 'content_5d0b35be067964_15748064',
+  'has_nocache_code' => false,
+  'file_dependency' => 
+  array (
+    '5b6e6f3300a55b2b6d6442d7f5fd19ea72b214bb' => 
+    array (
+      0 => '/var/www/html/pw2/application/views/chart.php',
+      1 => 1560930684,
+      2 => 'file',
+    ),
+  ),
+  'includes' => 
+  array (
+  ),
+),false)) {
+function content_5d0b35be067964_15748064 (Smarty_Internal_Template $_smarty_tpl) {
+?><html>
 <head>
-    <title>Chart</title>
+	<title>Chart</title>
 </head>
 <body>
 
 <div id="container-chart"></div>
 
-<script src="https://code.highcharts.com/highcharts.js"></script>
-<script type="text/javascript">
+<?php echo '<script'; ?>
+ src="https://code.highcharts.com/highcharts.js"><?php echo '</script'; ?>
+>
+<?php echo '<script'; ?>
+ type="text/javascript">
 Highcharts.chart('container-chart', {
     chart: {
         type: 'column'
@@ -19,11 +45,7 @@ Highcharts.chart('container-chart', {
         text: 'Dibagi per Benua'
     },
     xAxis: {
-        categories: [
-                        {foreach $daftar_pahlawan as $pahlawan}
-                        '{$pahlawan.nama}',
-                        {/foreach}
-                    ],
+        categories: ['Africa', 'America', 'Asia', 'Europe', 'Oceania'],
         title: {
             text: null
         }
@@ -65,15 +87,13 @@ Highcharts.chart('container-chart', {
     series: [
     {
         name: 'Usia',
-        data: [
-                {foreach $daftar_pahlawan as $pahlawan}
-                    {$pahlawan.usia},
-                {/foreach}
-              ]
+        data: [1016, 1001, 4436, 738, 40]
     }
     ]
 });
-</script>
+<?php echo '</script'; ?>
+>
 
 </body>
-</html>
+</html><?php }
+}
