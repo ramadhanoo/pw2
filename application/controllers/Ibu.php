@@ -7,6 +7,11 @@ class Ibu extends CI_Controller {
     {
         parent::__construct();
         $this->load->model("ibu_model");
+
+        if(!$this->session->userdata('username'))
+        {
+        	redirect('login');
+        }
     }
 
 	public function index()
@@ -16,16 +21,16 @@ class Ibu extends CI_Controller {
 
 	public function read()
 	{
-		$daftar_ibu = $this->ibu_model->read();
-
 		$view_data = array();
+		
+		$daftar_ibu = $this->ibu_model->read();
 		$view_data['daftar_ibu'] = $daftar_ibu;
 
 		$view_data['body_page'] = 'ibu_read';
 		$this->smartie->view("template/index", $view_data);
 	}
 
-	public function insert($view_data=array()) 
+	public function insert() 
 	{
 		$view_data['body_page'] = 'ibu_insert';
 		$this->smartie->view("template/index", $view_data);
@@ -89,9 +94,9 @@ class Ibu extends CI_Controller {
 
 	public function update($id_ibu) 
 	{
-		$data_ibu = $this->ibu_model->read_single($id_ibu);
-
 		$view_data = array();
+		
+		$data_ibu = $this->ibu_model->read_single($id_ibu);
 		$view_data['data_ibu'] = $data_ibu;
 
 		$view_data['body_page'] = 'ibu_update';

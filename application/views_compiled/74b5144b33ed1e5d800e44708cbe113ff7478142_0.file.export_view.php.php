@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-06-19 13:14:07
+/* Smarty version 3.1.33, created on 2019-06-21 08:12:34
   from '/var/www/html/pw2/application/views/export_view.php' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d09d2aff341e0_88094853',
+  'unifunc' => 'content_5d0c2f023b4289_10390979',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '74b5144b33ed1e5d800e44708cbe113ff7478142' => 
     array (
       0 => '/var/www/html/pw2/application/views/export_view.php',
-      1 => 1558831979,
+      1 => 1560944327,
       2 => 'file',
     ),
   ),
@@ -20,7 +20,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_5d09d2aff341e0_88094853 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d0c2f023b4289_10390979 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html>
 <head>
@@ -33,7 +33,7 @@ function content_5d09d2aff341e0_88094853 (Smarty_Internal_Template $_smarty_tpl)
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
 <body>
 
-	<table border="1" class="table table-striped">
+	<table class="table table-striped table-hover" id="dataTable">
 		<thead>
 			<tr>
 				<th>ID Ibu</th>
