@@ -20,8 +20,8 @@ class Login extends CI_Controller {
 		$this->form_validation->set_rules('username', 'Username', 'required');
 		$this->form_validation->set_rules('password', 'Password', 'required|callback_password_check');
 
-        if ($this->form_validation->run() === TRUE)
-        {
+    if ($this->form_validation->run() === TRUE)
+    {
 			redirect("ibu/read");
 		}
 		else
