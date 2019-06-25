@@ -13,7 +13,7 @@
 					{/if}
 				{/foreach}
 			</select>
-			
+
 		</td>
 	</tr>
 	<tr>
@@ -42,7 +42,7 @@
 						<input type="radio" name="gender_anak" value="2" checked> Wanita
 					</div>
 				{/if}
-				
+
 			</td>
 		</tr>
 	<tr>
@@ -50,5 +50,4 @@
 		<td><button class="btn btn-primary"><i class="fas fa-save"></i> Update</button></td>
 	</tr>
 </table>
-
 </form>

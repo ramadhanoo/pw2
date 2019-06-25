@@ -3,7 +3,6 @@
 <h1 class="h3 mb-2 text-gray-800">Daftar Anak</h1>
 <hr class="sidebar-divider">
 
-<!--body page-->
 <a href="{site_url('anak/insert')}" class="btn btn-primary"><i class="fas fa-plus"></i> Insert</a>
 <br /><br />
 
@@ -34,7 +33,7 @@
 				<a href="{site_url("anak/update/{$anak.id_anak}")}" class="btn btn-success" >
 				<i class="fa fa-edit"></i> Update
 				</a>
-				
+
 				<a href="{site_url("anak/delete_action/{$anak.id_anak}")}" class="btn btn-danger">
 				<i class="fa fa-trash"></i> Delete
 				</a>

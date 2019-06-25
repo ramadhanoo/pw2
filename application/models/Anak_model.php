@@ -2,7 +2,7 @@
 
 class Anak_model extends CI_Model {
 
-	public function read() 
+	public function read()
 	{
 		$this->db->select ('anak.*');
 		$this->db->select ('ibu.nama_ibu');
@@ -13,7 +13,7 @@ class Anak_model extends CI_Model {
 		return $hasil;
   	}
 
-  	public function read_single($id_anak) 
+  public function read_single($id_anak) 
 	{
 		$this->db->select ('*');
 		$this->db->from ('anak');
@@ -23,20 +23,20 @@ class Anak_model extends CI_Model {
 		return $hasil;
   	}
 
-	public function insert($insert_data) 
+	public function insert($insert_data)
 	{
 		$hasil = $this->db->insert('anak', $insert_data);
 		return $hasil;
 	}
 
-	public function update($id_anak, $update_data) 
+	public function update($id_anak, $update_data)
 	{
 		$this->db->where('id_anak', $id_anak);
 		$hasil = $this->db->update('anak', $update_data);
 		return $hasil;
 	}
 
-	public function delete($id_anak) 
+	public function delete($id_anak)
 	{
 		$this->db->where('id_anak', $id_anak);
 		$hasil = $this->db->delete('anak');

@@ -4,31 +4,31 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Login extends CI_Controller {
 
 	function __construct()
-    {
+  {
         parent::__construct();
         $this->load->model("user_model");
         $this->load->library('encryption');
-    }
+  }
 
-	public function index() 
+	public function index()
 	{
 		$this->smartie->view("login");
 	}
 
-	public function login_action() 
-	{	
+	public function login_action()
+	{
 		$this->form_validation->set_rules('username', 'Username', 'required');
 		$this->form_validation->set_rules('password', 'Password', 'required|callback_password_check');
 
-        if ($this->form_validation->run() === TRUE) 
+        if ($this->form_validation->run() === TRUE)
         {
 			redirect("ibu/read");
-		} 
-		else 
+		}
+		else
 		{
 			$this->index();
 		}
-		
+
 	}
 
 	public function password_check()
@@ -41,7 +41,7 @@ class Login extends CI_Controller {
 		$data_user = $this->user_model->read_single($username);
 		$encrypt_password = $data_user['password'];
 		$decrypt_password = $this->encryption->decrypt($encrypt_password);
-		
+
 		//match password login vs password db
 		if($password == $decrypt_password)
 		{
@@ -50,9 +50,9 @@ class Login extends CI_Controller {
             $this->session->set_userdata($user_session);
 
 			return TRUE;
-		} 
+		}
 		else
-		{	
+		{
 			//password not match
 			$this->form_validation->set_message('password_check', 'Invalid Login');
 			return FALSE;

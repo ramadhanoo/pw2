@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Anak extends CI_Controller {
 
 	function __construct()
-    {
+  {
         parent::__construct();
         $this->load->model(array("ibu_model", "anak_model"));
 
@@ -30,7 +30,7 @@ class Anak extends CI_Controller {
 		$this->smartie->view("template/index", $view_data);
 	}
 
-	public function insert() 
+	public function insert()
 	{
 		$view_data = array();
 
@@ -41,13 +41,13 @@ class Anak extends CI_Controller {
 		$this->smartie->view("template/index", $view_data);
 	}
 
-	public function insert_action() 
-	{	
+	public function insert_action()
+	{
 		$this->form_validation->set_rules('id_ibu', 'Nama Ibu', 'required');
 		$this->form_validation->set_rules('nama_anak', 'Nama Anak', 'required');
         $this->form_validation->set_rules('gender_anak', 'Gender Anak', 'required');
 
-        if ($this->form_validation->run() == TRUE) 
+        if ($this->form_validation->run() == TRUE)
         {
         	//insert data to db
 		    $insert_data = array();
@@ -57,15 +57,15 @@ class Anak extends CI_Controller {
 
 			$this->anak_model->insert($insert_data);
 			redirect("anak/read");
-		} 
-		else 
+		}
+		else
 		{
 			$this->insert();
 		}
-		
+
 	}
 
-	public function update($id_anak) 
+	public function update($id_anak)
 	{
 		$view_data = array();
 
@@ -79,13 +79,13 @@ class Anak extends CI_Controller {
 		$this->smartie->view("template/index", $view_data);
 	}
 
-	public function update_action($id_anak) 
-	{	
+	public function update_action($id_anak)
+	{
 		$this->form_validation->set_rules('id_ibu', 'Nama Ibu', 'required');
 		$this->form_validation->set_rules('nama_anak', 'Nama Anak', 'required');
         $this->form_validation->set_rules('gender_anak', 'Gender Anak', 'required');
 
-        if ($this->form_validation->run() == TRUE) 
+        if ($this->form_validation->run() == TRUE)
         {
         	$update_data = array();
         	$update_data['id_ibu'] = $this->input->post("id_ibu");
@@ -94,16 +94,16 @@ class Anak extends CI_Controller {
 			$this->anak_model->update($id_anak, $update_data);
 
 			redirect("anak/read");
-			
-		} 
-		else 
+
+		}
+		else
 		{
 			$this->update($id_anak);
 		}
 	}
 
-	public function delete_action($id_anak) 
-	{	
+	public function delete_action($id_anak)
+	{
 		$this->anak_model->delete($id_anak);
 		redirect("anak/read");
 	}

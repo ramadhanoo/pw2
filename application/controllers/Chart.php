@@ -15,7 +15,7 @@ class Chart extends CI_Controller {
     {
         $view_data['body_page'] = 'chart';
         $this->smartie->view("template/index", $view_data);
-    	
+
         //$this->load->view('chart');
     }
 
@@ -28,8 +28,8 @@ class Chart extends CI_Controller {
     	$daftar_pahlawan = $this->pahlawan_model->read();
 
     	//lempar data pahlawan ke view
-		$view_data = array();
-		$view_data['daftar_pahlawan'] = $daftar_pahlawan;
+  		$view_data = array();
+  		$view_data['daftar_pahlawan'] = $daftar_pahlawan;
 
 		$view_data['body_page'] = 'pahlawan_chart';
         $this->smartie->view("template/index", $view_data);

@@ -4,7 +4,7 @@ defined('BASEPATH') OR exit('No direct script access allowed');
 class Ibu extends CI_Controller {
 
 	function __construct()
-    {
+  {
         parent::__construct();
         $this->load->model("ibu_model");
 
@@ -12,7 +12,7 @@ class Ibu extends CI_Controller {
         {
         	redirect('login');
         }
-    }
+  }
 
 	public function index()
 	{
@@ -22,7 +22,7 @@ class Ibu extends CI_Controller {
 	public function read()
 	{
 		$view_data = array();
-		
+
 		$daftar_ibu = $this->ibu_model->read();
 		$view_data['daftar_ibu'] = $daftar_ibu;
 
@@ -30,16 +30,16 @@ class Ibu extends CI_Controller {
 		$this->smartie->view("template/index", $view_data);
 	}
 
-	public function insert() 
+	public function insert()
 	{
 		$view_data['body_page'] = 'ibu_insert';
 		$this->smartie->view("template/index", $view_data);
-		
+
 		//$this->load->view("ibu_insert");
 	}
 
-	public function insert_action() 
-	{	
+	public function insert_action()
+	{
 		$this->form_validation->set_rules('nama_ibu', 'Nama Ibu', 'required');
         $this->form_validation->set_rules('umur_ibu', 'Umur Ibu', 'required|numeric');
 
@@ -47,7 +47,7 @@ class Ibu extends CI_Controller {
         $view_data['error'] = '';
 
         //validasi input benar
-        if ($this->form_validation->run() == TRUE) 
+        if ($this->form_validation->run() == TRUE)
         {
         	//setting upload
         	$config['upload_path']          = './uploads/';
@@ -61,9 +61,9 @@ class Ibu extends CI_Controller {
 
             //validasi foto salah
             if ( !$this->upload->do_upload('userfile'))
-            {	
+            {
                 $view_data['error'] = $this->upload->display_errors();
-                
+
                 $view_data['body_page'] = 'ibu_insert';
 				$this->smartie->view("template/index", $view_data);
                 //$this->load->view('ibu_insert', $view_data);
@@ -83,19 +83,19 @@ class Ibu extends CI_Controller {
 				redirect("ibu/read");
             }
 
-		} 
-		else 
+		}
+		else
 		{
 			$this->insert();
 		}
 
-		
+
 	}
 
-	public function update($id_ibu) 
+	public function update($id_ibu)
 	{
 		$view_data = array();
-		
+
 		$data_ibu = $this->ibu_model->read_single($id_ibu);
 		$view_data['data_ibu'] = $data_ibu;
 
@@ -104,12 +104,12 @@ class Ibu extends CI_Controller {
 		//$this->load->view('ibu_update', $view_data);
 	}
 
-	public function update_action($id_ibu) 
-	{	
+	public function update_action($id_ibu)
+	{
 		$this->form_validation->set_rules('nama_ibu', 'Nama Ibu', 'required');
         $this->form_validation->set_rules('umur_ibu', 'Umur Ibu', 'required|numeric');
 
-        if ($this->form_validation->run() == TRUE) 
+        if ($this->form_validation->run() == TRUE)
         {
         	//check ada foto baru
         	if($_FILES['userfile']['name']) {
@@ -125,7 +125,7 @@ class Ibu extends CI_Controller {
 
 	            //validasi foto salah
 	            if ( !$this->upload->do_upload('userfile'))
-	            {	
+	            {
 	            	$data_ibu = $this->ibu_model->read_single($id_ibu);
 
 	                $view_data = array();
@@ -156,16 +156,16 @@ class Ibu extends CI_Controller {
 
 				redirect("ibu/read");
 	        }
-			
-		} 
-		else 
+
+		}
+		else
 		{
 			$this->update($id_ibu);
 		}
 	}
 
-	public function delete_action($id_ibu) 
-	{	
+	public function delete_action($id_ibu)
+	{
 		$this->ibu_model->delete($id_ibu);
 		redirect("ibu/read");
 	}
@@ -174,7 +174,7 @@ class Ibu extends CI_Controller {
 	{
 		//load library excel
 		$this->load->library('excel');
-                
+
         $excel = $this->excel;
         $excel->setActiveSheetIndex(0)->setTitle('Export Data');
 
@@ -195,12 +195,12 @@ class Ibu extends CI_Controller {
             $baris++;
 		}
 
-		//save file         
+		//save file
         $filename='ibu_data.xls';
         header('Content-Type: application/vnd.ms-excel');
         header('Content-Disposition: attachment;filename="'.$filename.'"');
         header('Cache-Control: max-age=0');
-                    
+
         $objWriter = PHPExcel_IOFactory::createWriter($this->excel, 'Excel5');
         $objWriter->save('php://output');
 

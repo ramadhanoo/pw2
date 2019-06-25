@@ -20,9 +20,8 @@ class Export extends CI_Controller {
 
         public function download()
         {
-                //load our new PHPExcel library
                 $this->load->library('excel');
-                
+
                 $excel = $this->excel;
                 $excel->setActiveSheetIndex(0)->setTitle('Export Data');
 
@@ -60,12 +59,12 @@ class Export extends CI_Controller {
                 $excel->getActiveSheet()->setCellValue('B8', 'Joko Widodo');
                 $excel->getActiveSheet()->setCellValue('C8', '5 Tahun');
 
-                //save file         
+                //save file
                 $filename='export_data.xls';
                 header('Content-Type: application/vnd.ms-excel');
                 header('Content-Disposition: attachment;filename="'.$filename.'"');
                 header('Cache-Control: max-age=0');
-                            
+
                 $objWriter = PHPExcel_IOFactory::createWriter($this->excel, 'Excel5');
                 $objWriter->save('php://output');
         }

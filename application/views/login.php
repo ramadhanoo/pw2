@@ -11,10 +11,7 @@
 
   <title>SB Admin 2 - Login</title>
 
-  <!-- Custom fonts for this template-->
   <link href="{base_url('asset/vendor/fontawesome-free/css/all.min.css')}" rel="stylesheet" type="text/css">
-  
-  <!-- Custom styles for this template-->
   <link href="{base_url('asset/css/sb-admin-2.min.css')}" rel="stylesheet">
 
 </head>
@@ -37,7 +34,7 @@
                   <div class="text-center">
                     <h1 class="h4 text-gray-900 mb-4">Login</h1>
                   </div>
-                  
+
                   <form class="user" action="{site_url('login/login_action')}" method="post">
                     <div class="form-group">
                       <input type="text" name="username" class="form-control form-control-user" placeholder="Username">

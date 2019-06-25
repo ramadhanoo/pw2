@@ -1,4 +1,5 @@
 {$error}
+
 <form name="anak_insert" method="post" action="{site_url('anak/insert_action')}" enctype="multipart/form-data">
 
 	<table border="1" class="table table-striped">
@@ -10,7 +11,7 @@
 					<option value="{$ibu.id_ibu}">{$ibu.nama_ibu}</option>
 					{/foreach}
 				</select>
-				
+
 			</td>
 		</tr>
 		<tr>

@@ -2,7 +2,7 @@
 
 class User_model extends CI_Model {
 
-	public function read() 
+	public function read()
 	{
 		$this->db->select ('*');
 		$this->db->from ('user');
@@ -11,7 +11,7 @@ class User_model extends CI_Model {
 		return $hasil;
   	}
 
-  	public function read_single($username) 
+  public function read_single($username) 
 	{
 		$this->db->select ('*');
 		$this->db->from ('user');
