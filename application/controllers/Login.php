@@ -34,8 +34,8 @@ class Login extends CI_Controller {
 	public function password_check()
 	{
 		//get input from login
-    	$username = $this->input->post("username");
-    	$password = $this->input->post("password");
+    $username = $this->input->post("username");
+    $password = $this->input->post("password");
 
     	//get password from db using username
 		$data_user = $this->user_model->read_single($username);
