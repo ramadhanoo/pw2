@@ -166,7 +166,7 @@ class Ibu extends CI_Controller {
 
 	public function delete_action($id_ibu)
 	{
-		//$this->ibu_model->delete($id_ibu);
+		$this->ibu_model->delete($id_ibu);
 		$result = '<div class="alert alert-success">Berhasil Hapus Data</div>';
 		$result .= '<a href="'.site_url('ibu/read').'" class="btn btn-warning"><i class="fas fa-chevron-left"></i> Kembali Daftar Ibu</a>';
 		echo $result;
