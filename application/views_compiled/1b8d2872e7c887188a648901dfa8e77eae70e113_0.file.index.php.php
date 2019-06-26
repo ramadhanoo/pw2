@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 3.1.33, created on 2019-06-19 18:37:49
+/* Smarty version 3.1.33, created on 2019-06-26 07:51:43
   from '/var/www/html/pw2/application/views/template/index.php' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '3.1.33',
-  'unifunc' => 'content_5d0a1e8daa5591_97681909',
+  'unifunc' => 'content_5d12c19f4b1fa7_39325835',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
     '1b8d2872e7c887188a648901dfa8e77eae70e113' => 
     array (
       0 => '/var/www/html/pw2/application/views/template/index.php',
-      1 => 1560944268,
+      1 => 1561510080,
       2 => 'file',
     ),
   ),
@@ -23,7 +23,7 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
     'file:template/footer.php' => 1,
   ),
 ),false)) {
-function content_5d0a1e8daa5591_97681909 (Smarty_Internal_Template $_smarty_tpl) {
+function content_5d12c19f4b1fa7_39325835 (Smarty_Internal_Template $_smarty_tpl) {
 ?><!DOCTYPE html>
 <html lang="en">
 
@@ -40,11 +40,39 @@ function content_5d0a1e8daa5591_97681909 (Smarty_Internal_Template $_smarty_tpl)
   <!-- Custom fonts for this template-->
   <link href="<?php echo base_url('asset/vendor/fontawesome-free/css/all.min.css');?>
 " rel="stylesheet" type="text/css">
- 
+
   <link href="<?php echo base_url('asset/css/sb-admin-2.min.css');?>
 " rel="stylesheet">
   <link href="<?php echo base_url('asset/vendor/datatables/dataTables.bootstrap4.min.css');?>
 " rel="stylesheet">
+
+  <!-- Bootstrap core JavaScript-->
+  <?php echo '<script'; ?>
+ src="<?php echo base_url('asset/vendor/jquery/jquery.min.js');?>
+"><?php echo '</script'; ?>
+>
+  <?php echo '<script'; ?>
+ src="<?php echo base_url('asset/vendor/bootstrap/js/bootstrap.bundle.min.js');?>
+"><?php echo '</script'; ?>
+>
+
+  <?php echo '<script'; ?>
+ src="<?php echo base_url('asset/vendor/datatables/jquery.dataTables.min.js');?>
+"><?php echo '</script'; ?>
+>
+  <?php echo '<script'; ?>
+ src="<?php echo base_url('asset/vendor/datatables/dataTables.bootstrap4.min.js');?>
+"><?php echo '</script'; ?>
+>
+  <?php echo '<script'; ?>
+ src="<?php echo base_url('asset/js/demo/datatables-demo.js');?>
+"><?php echo '</script'; ?>
+>
+
+  <?php echo '<script'; ?>
+ src="<?php echo base_url('asset/js/sb-admin-2.min.js');?>
+"><?php echo '</script'; ?>
+>
 </head>
 
 <body id="page-top">
@@ -90,34 +118,6 @@ function content_5d0a1e8daa5591_97681909 (Smarty_Internal_Template $_smarty_tpl)
     <i class="fas fa-angle-up"></i>
   </a>
 
-  <!-- Bootstrap core JavaScript-->
-  <?php echo '<script'; ?>
- src="<?php echo base_url('asset/vendor/jquery/jquery.min.js');?>
-"><?php echo '</script'; ?>
->
-  <?php echo '<script'; ?>
- src="<?php echo base_url('asset/vendor/bootstrap/js/bootstrap.bundle.min.js');?>
-"><?php echo '</script'; ?>
->
-
-  <?php echo '<script'; ?>
- src="<?php echo base_url('asset/vendor/datatables/jquery.dataTables.min.js');?>
-"><?php echo '</script'; ?>
->
-  <?php echo '<script'; ?>
- src="<?php echo base_url('asset/vendor/datatables/dataTables.bootstrap4.min.js');?>
-"><?php echo '</script'; ?>
->
-  <?php echo '<script'; ?>
- src="<?php echo base_url('asset/js/demo/datatables-demo.js');?>
-"><?php echo '</script'; ?>
->
-
-  <?php echo '<script'; ?>
- src="<?php echo base_url('asset/js/sb-admin-2.min.js');?>
-"><?php echo '</script'; ?>
->
-  
 </body>
 
 </html>

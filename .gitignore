@@ -1,6 +1,6 @@
 .DS_Store
 
-application/views_compiled
+application/views_compiled/
 uploads/
 
 user_guide_src/build/*
