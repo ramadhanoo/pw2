@@ -32,8 +32,8 @@
 				<a href="{site_url("ibu/update/{$ibu.id_ibu}")}" class="btn btn-success" >
 				<i class="fa fa-edit"></i> Update
 				</a>
-				
-				<a href="{site_url("ibu/delete_action/{$ibu.id_ibu}")}" class="btn btn-danger">
+
+				<a href="{site_url("ibu/delete_action/{$ibu.id_ibu}")}" class="btn btn-danger btn-delete" onclick="return confirm('Anda yakin?')">
 				<i class="fa fa-trash"></i> Delete
 				</a>
 			</td>
@@ -47,3 +47,16 @@
 <!--end of body page-->
 
 </div>
+
+<script type="text/javascript">
+$('.btn-delete').click(function(event) {
+    event.preventDefault();
+    $.ajax({
+        url: $(this).attr('href'),
+        success: function(response) {
+            $('#container-fluid').html(response);
+        }
+    });
+    return false; // for good measure
+});
+</script>
